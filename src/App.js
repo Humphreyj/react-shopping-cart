@@ -17,17 +17,8 @@ function App() {
 		setCart([...cart,item])
 	};
 
-	const removeItem = e => {
-		let cartCopy = [...cart];
-		let index = cartCopy.indexOf(e.target.id)
-		console.log(cartCopy,index)
-		if(index !== -1) {
-			cartCopy.splice(index,1);
-			setCart([cartCopy])
-			console.log(cartCopy)
-		}
-
-
+	const removeItem = title => {
+		setCart(cart.filter(item => item.title !== title))
 	}
 	return (
 		<div className="App">

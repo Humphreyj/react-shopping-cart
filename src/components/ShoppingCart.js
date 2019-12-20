@@ -19,7 +19,9 @@ const ShoppingCart = () => {
 			{cart.map(item => (
 				<Item
 				
-				 key={item.id} {...item} />
+				 key={item.id}
+				 title={item.title}
+				 id={item.id} {...item} />
 			))}
 
 			<div className="shopping-cart__checkout">
